@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0e1b3d">
-<title>명옥재 현 주문서 · 한약사가 만든 프리미엄 스틱</title>
-<meta name="description" content="명옥재 현(玄) 주문서. 시간을 빚어, 귀함을 담다. 한약사가 직접 배합한 프리미엄 스틱.">
+<title>명옥재 玄 주문서 · 한약사가 만든 프리미엄 스틱</title>
+<meta name="description" content="명옥재 玄 주문서. 시간을 빚어, 귀함을 담다. 한약사가 직접 배합한 프리미엄 스틱.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="명옥재 현">
-<meta property="og:title" content="명옥재 현 주문서">
+<meta property="og:site_name" content="명옥재 玄">
+<meta property="og:title" content="명옥재 玄 주문서">
 <meta property="og:description" content="시간을 빚어, 귀함을 담다 · 한약사가 직접 배합한 프리미엄 스틱">
 <meta property="og:image" content="./assets/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -42,12 +42,12 @@ body.has-stick{padding-bottom:84px;}
 .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 70% at 50% -10%,rgba(201,168,106,.18),transparent 60%);pointer-events:none;}
 .brand-mono{font-weight:600;font-size:12px;letter-spacing:.5em;color:var(--gold-soft);margin-bottom:18px;padding-left:.5em;}
 .brand-word{font-weight:700;font-size:46px;letter-spacing:.16em;line-height:1;padding-left:.16em;background:linear-gradient(180deg,#fff,#e7ddc6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
-.brand-seal{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:linear-gradient(140deg,var(--gold-soft),var(--gold-deep));color:#12203f;font-weight:800;font-size:19px;margin-top:14px;box-shadow:0 10px 22px -10px rgba(201,168,106,.9);}
+.brand-word .hanja,.splash-word .hanja{-webkit-text-fill-color:var(--gold-soft);color:var(--gold-soft);}
 .brand-sub{font-size:11px;letter-spacing:.34em;color:rgba(255,255,255,.62);margin-top:14px;text-transform:uppercase;}
 .hero-rule{width:38px;height:1px;background:var(--gold);margin:20px auto;opacity:.85;}
 .hero-tag{font-size:15.5px;color:rgba(255,255,255,.92);font-weight:300;}
 .hero-tag b{font-weight:700;color:var(--gold-bright);}
-.hero-img{margin:26px auto 0;max-width:340px;border-radius:14px;box-shadow:0 30px 60px -30px rgba(0,0,0,.75);}
+.hero-img{margin:28px auto 0;width:100%;max-width:440px;border-radius:16px;box-shadow:0 32px 64px -30px rgba(0,0,0,.78);}
 .hero-badge{display:inline-block;margin-top:22px;font-size:11px;letter-spacing:.32em;color:var(--gold-soft);border:1px solid var(--navy-line);border-radius:999px;padding:9px 20px;text-transform:uppercase;}
 
 /* ===== SHEET ===== */
@@ -175,8 +175,17 @@ input.inp[readonly]{background:var(--paper-2);cursor:pointer;}
 
 /* footer */
 .foot{background:var(--navy);color:rgba(255,255,255,.62);padding:34px 26px 40px;text-align:center;}
-.foot .fw{font-size:22px;font-weight:700;letter-spacing:.2em;color:var(--gold-soft);padding-left:.2em;margin-bottom:6px;}
-.foot .fseal{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:linear-gradient(140deg,var(--gold-soft),var(--gold-deep));color:#12203f;font-weight:800;font-size:16px;margin-bottom:14px;}
+.foot .fw{font-size:22px;font-weight:700;letter-spacing:.2em;color:var(--gold-soft);padding-left:.2em;margin-bottom:14px;}
+/* 네이버 스마트스토어 */
+.store-box{max-width:380px;margin:24px auto 0;}
+.store-div{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.45);font-size:11.5px;letter-spacing:.02em;margin-bottom:14px;}
+.store-div::before,.store-div::after{content:"";flex:1;height:1px;background:var(--navy-line);}
+.naver-btn{display:flex;align-items:center;gap:11px;width:100%;background:#03c75a;color:#fff;text-decoration:none;border-radius:13px;padding:15px 16px;font-size:14.5px;font-weight:600;box-shadow:0 14px 30px -14px rgba(3,199,90,.75);transition:transform .12s, filter .2s;}
+.naver-btn:active{transform:translateY(1px);filter:brightness(.96);}
+.nb-ico{flex-shrink:0;width:26px;height:26px;border-radius:7px;background:#fff;color:#03c75a;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;}
+.nb-txt{flex:1;text-align:left;line-height:1.4;}
+.nb-txt small{display:block;font-size:11.5px;font-weight:400;color:rgba(255,255,255,.82);margin-top:2px;}
+.nb-arrow{flex-shrink:0;font-size:19px;opacity:.85;}
 .foot .ft{font-size:12.5px;line-height:1.9;}
 .foot .ft b{color:rgba(255,255,255,.85);font-weight:400;}
 .foot .fcopy{font-size:10.5px;letter-spacing:.2em;color:rgba(255,255,255,.32);margin-top:18px;text-transform:uppercase;}
@@ -246,7 +255,6 @@ input.inp[readonly]{background:var(--paper-2);cursor:pointer;}
 .splash-inner{text-align:center;padding-bottom:16px;position:relative;z-index:3;}
 .splash-est{font-weight:600;font-size:12.5px;letter-spacing:.5em;color:var(--gold-soft);padding-left:.5em;margin-bottom:16px;opacity:0;animation:spFade .7s ease .15s both;}
 .splash-word{font-weight:800;font-size:clamp(42px,14vw,64px);line-height:1;background:linear-gradient(180deg,#ffffff,#e4d09d);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;opacity:0;animation:spWord 1s cubic-bezier(.2,.7,.2,1) .05s both;}
-.splash-seal{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(140deg,var(--gold-soft),var(--gold-deep));color:#12203f;font-weight:800;font-size:21px;margin-top:18px;opacity:0;animation:spFade .7s ease .45s both;}
 .splash-line{width:38px;height:1px;background:var(--gold);margin:18px auto 0;opacity:0;animation:spFade .7s ease .55s both;}
 .splash-sub{font-size:11px;letter-spacing:.34em;color:rgba(255,255,255,.55);text-transform:uppercase;margin-top:14px;opacity:0;animation:spFade .7s ease .68s both;}
 @keyframes spWord{0%{opacity:0;transform:translateY(12px) scale(.94);letter-spacing:.26em;}100%{opacity:1;transform:none;letter-spacing:.08em;}}
@@ -282,8 +290,7 @@ input.inp[readonly]{background:var(--paper-2);cursor:pointer;}
   <div class="cine-veil"></div>
   <div class="splash-inner">
     <div class="splash-est">MYEONGOKJAE</div>
-    <div class="splash-word">명옥재 현</div>
-    <div class="splash-seal">玄</div>
+    <div class="splash-word">명옥재 <span class="hanja">玄</span></div>
     <div class="splash-line"></div>
     <div class="splash-sub">Premium Herbal Stick</div>
   </div>
@@ -299,12 +306,11 @@ input.inp[readonly]{background:var(--paper-2);cursor:pointer;}
   <!-- HERO -->
   <header class="hero">
     <div class="brand-mono">MYEONGOKJAE</div>
-    <div class="brand-word">명옥재 현</div>
-    <div class="brand-seal">玄</div>
+    <div class="brand-word">명옥재 <span class="hanja">玄</span></div>
     <div class="brand-sub">Premium Herbal Stick</div>
     <div class="hero-rule"></div>
     <p class="hero-tag">시간을 빚어, <b>귀함을 담다</b></p>
-    <img class="hero-img" src="./assets/hero.jpg" alt="명옥재 현 선물세트" loading="eager">
+    <img class="hero-img" src="./assets/hero.jpg" alt="명옥재 玄 선물세트" loading="eager">
     <div class="hero-badge">Online Order</div>
   </header>
 
@@ -312,7 +318,7 @@ input.inp[readonly]{background:var(--paper-2);cursor:pointer;}
   <main class="sheet">
 
     <!-- 상세 이미지 (판매가 상단) -->
-    <div class="detail first"><img src="./assets/intro.jpg" alt="시간을 빚어, 귀함을 담다 · 명옥재 현" loading="lazy"></div>
+    <div class="detail first"><img src="./assets/intro.jpg" alt="시간을 빚어, 귀함을 담다 · 명옥재 玄" loading="lazy"></div>
 
     <!-- 판매가 안내 -->
     <section class="sec pricing" id="pricing">
@@ -342,7 +348,7 @@ input.inp[readonly]{background:var(--paper-2);cursor:pointer;}
     </section>
 
     <!-- 상세 이미지 (판매가 아래) -->
-    <div class="detail paper"><img src="./assets/point.jpg" alt="한약사가 만든 명옥재 현 특별한 포인트 세 가지" loading="lazy"></div>
+    <div class="detail paper"><img src="./assets/point.jpg" alt="한약사가 만든 명옥재 玄 특별한 포인트 세 가지" loading="lazy"></div>
     <div class="detail paper"><img src="./assets/story.jpg" alt="이재현 한약사의 고집" loading="lazy"></div>
     <div class="detail"><img src="./assets/maker.jpg" alt="최상급 원료와 정직한 제조법" loading="lazy"></div>
 
@@ -358,9 +364,9 @@ input.inp[readonly]{background:var(--paper-2);cursor:pointer;}
 
       <article class="product" id="p-box">
         <div class="p-top">
-          <img class="p-thumb" src="./assets/hero.jpg" alt="명옥재 현">
+          <img class="p-thumb" src="./assets/hero.jpg" alt="명옥재 玄">
           <div class="p-info">
-            <div class="p-name">명옥재 현 (玄)</div>
+            <div class="p-name">명옥재 玄</div>
             <div class="p-desc">한약사가 직접 배합한 <span class="hl">프리미엄 스틱</span><br><b>15g 스틱</b> · 선물용 기프트 박스 구성</div>
             <div class="p-price">
               <span class="now" id="boxPrice">89,000<span class="won">원</span></span>
@@ -373,7 +379,7 @@ input.inp[readonly]{background:var(--paper-2);cursor:pointer;}
         <div class="p-foot">
           <div class="stepper" data-key="box">
             <button type="button" data-d="-1">−</button>
-            <input type="number" inputmode="numeric" min="0" value="0" aria-label="명옥재 현 수량">
+            <input type="number" inputmode="numeric" min="0" value="0" aria-label="명옥재 玄 수량">
             <button type="button" data-d="1">+</button>
           </div>
           <div class="p-line zero" id="boxLine">0원</div>
@@ -450,9 +456,16 @@ input.inp[readonly]{background:var(--paper-2);cursor:pointer;}
 
   <!-- FOOTER -->
   <footer class="foot">
-    <div class="fw">명옥재 현</div>
-    <div class="fseal">玄</div>
+    <div class="fw">명옥재 玄</div>
     <div class="ft"><b>(주)시트러스애비뉴</b><br>시간을 빚어, 귀함을 담다</div>
+    <div class="store-box">
+      <div class="store-div"><span>카드 결제 · 네이버페이</span></div>
+      <a class="naver-btn" href="https://smartstore.naver.com/citrusedit/products/13739336334" target="_blank" rel="noopener">
+        <span class="nb-ico">N</span>
+        <span class="nb-txt">네이버 스마트스토어에서 주문<small>카드 · 네이버페이로 간편 결제</small></span>
+        <span class="nb-arrow">›</span>
+      </a>
+    </div>
     <div class="acct-card">
       <div class="acct-label">무통장 입금 계좌</div>
       <div class="acct-bank">기업은행</div>
@@ -521,7 +534,7 @@ const BULK_MIN = 10;                            // 이 수량 이상이면 대�
 const SHIP_FEE = 0;                             // 배송비 · 지인 판매로 상품가에 포함 (0원)
 
 const BANK = { name: "기업은행", acct: "040-501078-04-017", holder: "(주)시트러스애비뉴" };
-const BRAND = "명옥재 현";
+const BRAND = "명옥재 玄";
 
 /* ===================== 상태 ===================== */
 const qty = { box:0 };
