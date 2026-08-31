@@ -62,7 +62,26 @@ body.has-stick{padding-bottom:84px;}
 .detail{margin:0 -22px 34px;background:var(--navy);}
 .detail img{width:100%;height:auto;}
 .detail.first{margin-top:-34px;border-radius:26px 26px 0 0;overflow:hidden;}
-.detail.paper{background:var(--paper-2);}
+
+/* 상세 이미지 연속 배치 (이미지 사이 여백 없이) */
+.details{margin:0 -22px 34px;background:#000813;font-size:0;}
+.details img{width:100%;height:auto;display:block;}
+
+/* 120시간 카운트 애니메이션 */
+.time-anim{--w:min(100vw,600px);background:linear-gradient(180deg,#000813,#000a16);text-align:center;font-size:16px;padding:calc(var(--w)*.045) calc(var(--w)*.05) calc(var(--w)*.035);}
+.t-step{font-size:calc(var(--w)*.051);font-weight:500;color:#fff;letter-spacing:-.01em;line-height:1.35;}
+.t-step .t-num{font-weight:700;}
+.t-plus{font-size:calc(var(--w)*.028);color:var(--gold);margin:calc(var(--w)*.033) 0;line-height:1;}
+.t-total{display:flex;align-items:center;justify-content:center;gap:calc(var(--w)*.032);margin-top:calc(var(--w)*.052);}
+.t-brk{position:relative;flex-shrink:0;width:calc(var(--w)*.032);height:calc(var(--w)*.185);border:1.5px solid var(--gold);}
+.t-brk.l{border-right:none;} .t-brk.r{border-left:none;}
+.t-brk::before{content:"";position:absolute;inset:calc(var(--w)*.011);border:1px solid rgba(201,168,106,.5);}
+.t-brk.l::before{border-right:none;} .t-brk.r::before{border-left:none;}
+.t-big{font-size:calc(var(--w)*.155);font-weight:800;line-height:1.05;letter-spacing:.01em;background:linear-gradient(180deg,#f4e2b4,#c9a86a 55%,#a9873f);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;white-space:nowrap;}
+.t-note{font-size:calc(var(--w)*.037);color:var(--gold-soft);margin-top:calc(var(--w)*.038);letter-spacing:-.01em;}
+.time-anim>*{transition:opacity .55s ease, transform .55s ease;}
+.time-anim>.t-off{opacity:0;transform:translateY(calc(var(--w)*.018));}
+.t-total.t-lit .t-big{filter:drop-shadow(0 0 calc(var(--w)*.03) rgba(201,168,106,.45));transition:filter .8s ease;}
 
 /* 판매가 안내 */
 .pricing{border-bottom:1px solid var(--line);padding-bottom:30px;}
@@ -348,9 +367,42 @@ input.inp[readonly]{background:var(--paper-2);cursor:pointer;}
     </section>
 
     <!-- 상세 이미지 (판매가 아래) -->
-    <div class="detail paper"><img src="./assets/point.jpg" alt="한약사가 만든 명옥재 玄 특별한 포인트 세 가지" loading="lazy"></div>
-    <div class="detail paper"><img src="./assets/story.jpg" alt="이재현 한약사의 고집" loading="lazy"></div>
-    <div class="detail"><img src="./assets/maker.jpg" alt="최상급 원료와 정직한 제조법" loading="lazy"></div>
+    <div class="details">
+      <img src="./assets/d01.jpg" alt="명옥재 玄 원재료 · 인삼 · 복령 · 꿀" loading="lazy">
+      <img src="./assets/d02.jpg" alt="생지황 · 인삼 · 복령(백복령) · 꿀(봉밀)" loading="lazy">
+      <img src="./assets/d03.jpg" alt="한약사가 만든 명옥재 玄 특별한 포인트 세 가지" loading="lazy">
+      <img src="./assets/d04.jpg" alt="진짜 한약사가 직접 만든 제품은 어디에 있을까요?" loading="lazy">
+      <img src="./assets/d05.jpg" alt="이재현 한약사의 고집" loading="lazy">
+      <img src="./assets/d06.jpg" alt="최상급 원료와 정직한 제조법" loading="lazy">
+      <img src="./assets/d07.jpg" alt="단 한 방울의 물 없이, 진하게 담아내었습니다" loading="lazy">
+      <img src="./assets/d08.jpg" alt="Pure 100%의 진함" loading="lazy">
+      <img src="./assets/d09.jpg" alt="AIR-MILL TECHNOLOGY · 400~450 Mesh 초미립자" loading="lazy">
+      <img src="./assets/d10.jpg" alt="올해 명절엔 무엇을 드릴까 고민하셨다면" loading="lazy">
+      <img src="./assets/d11.jpg" alt="시간을 빚어, 귀함을 담다 · 명옥재 玄" loading="lazy">
+      <img src="./assets/d12.jpg" alt="PREMIUM GIFT SET · 받는 순간부터 선물입니다" loading="lazy">
+
+      <!-- 120시간 · 카운트 애니메이션 -->
+      <img src="./assets/d13a.jpg" alt="좋은 원료에는 시간과 정성이 필요합니다" loading="lazy">
+      <div class="time-anim" id="timeAnim">
+        <div class="t-step"><span class="t-num" data-to="72">72</span>시간의 중탕</div>
+        <div class="t-plus">+</div>
+        <div class="t-step"><span class="t-num" data-to="24">24</span>시간의 숙성</div>
+        <div class="t-plus">+</div>
+        <div class="t-step"><span class="t-num" data-to="24">24</span>시간의 재중탕</div>
+        <div class="t-total">
+          <span class="t-brk l"></span>
+          <span class="t-big"><span class="t-num" data-to="120">120</span> 시간</span>
+          <span class="t-brk r"></span>
+        </div>
+        <div class="t-note">총 120시간의 정성을 거쳐 완성됩니다.</div>
+      </div>
+      <img src="./assets/d13b.jpg" alt="120시간의 정성" loading="lazy">
+
+      <img src="./assets/d14.jpg" alt="이런 분께 추천합니다" loading="lazy">
+      <img src="./assets/d15.jpg" alt="명옥재 明玉齋 · 맑게 빚어, 귀한 분께 전합니다" loading="lazy">
+      <img src="./assets/d16.jpg" alt="자연치유도시 제천의 HACCP · GMP 인증 시설" loading="lazy">
+      <img src="./assets/d17.jpg" alt="HACCP · ISO 22000 · FSSC 22000 · 벤처기업 인증서" loading="lazy">
+    </div>
 
     <!-- 1. 상품 선택 -->
     <section class="sec">
@@ -789,6 +841,45 @@ if('IntersectionObserver' in window){
 } else { document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in')); }
 
 render();
+
+// 120시간 카운트 애니메이션 (스크롤 진입 시 1회)
+(function(){
+  const box = $('timeAnim'); if(!box) return;
+  const rows = Array.from(box.children);
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce || !('IntersectionObserver' in window)) return;   // 최종 값 그대로 표시
+
+  rows.forEach(r=>r.classList.add('t-off'));
+
+  function countUp(el, to, dur){
+    const start = performance.now();
+    el.textContent = '0';
+    (function step(now){
+      const p = Math.min(1, (now - start) / dur);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = to;
+    })(start);
+  }
+
+  let played = false;
+  function play(){
+    if(played) return; played = true;
+    rows.forEach((row, i)=>{
+      const last = row.classList.contains('t-total');
+      setTimeout(()=>{
+        row.classList.remove('t-off');
+        row.querySelectorAll('.t-num').forEach(n=> countUp(n, parseInt(n.dataset.to,10), last ? 1500 : 850));
+        if(last) setTimeout(()=>row.classList.add('t-lit'), 1500);
+      }, i * 480);
+    });
+  }
+
+  const io = new IntersectionObserver(es=>{
+    es.forEach(e=>{ if(e.isIntersecting){ play(); io.disconnect(); } });
+  }, {threshold:.3});
+  io.observe(box);
+})();
 
 // 진입 인트로 (세션당 1회)
 (function(){
